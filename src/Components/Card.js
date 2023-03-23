@@ -1,6 +1,6 @@
 import React from 'react'
 import {FcLike} from "react-icons/fc"
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Card = (props) => {
   let course = props.course;
