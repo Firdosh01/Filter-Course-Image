@@ -44,7 +44,7 @@ const App = () => {
 
       <div>
         {
-          loading ? (<Spinner/>) : (<Cards/>)
+          loading ? (<Spinner/>) : (<Cards courses= {courses}/>)
         }
       </div>
 

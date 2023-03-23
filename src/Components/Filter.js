@@ -8,7 +8,7 @@ const Filter = (props) => {
     <div>
       {
         filterData.map( (data) => (
-          <button>{data.title}</button>
+          <button key={data.id}>{data.title}</button>
         ))
       }
     </div>
