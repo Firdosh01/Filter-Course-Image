@@ -32,7 +32,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen bg-bgDark2">
 
       <div>
         <Navbar></Navbar>
@@ -42,7 +42,8 @@ const App = () => {
         <Filter filterData={filterData}></Filter>
       </div>
 
-      <div>
+      <div  className="w-11/12 max-w-[1200px] 
+        mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
         {
           loading ? (<Spinner/>) : (<Cards courses= {courses}/>)
         }

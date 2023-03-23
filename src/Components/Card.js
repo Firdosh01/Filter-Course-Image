@@ -5,13 +5,14 @@ import { toast } from 'react-toastify';
 const Card = (props) => {
   let course = props.course;
   return (
-    <div>
+    <div  className='w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden'>
 
-      <div>
+      <div className='relative'>
         <img src={course.image.url} />
       </div>
 
-      <div>
+      <div className='w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-12px]
+            grid place-items-center'>
         <button>
           {
               (<FcLike fontSize="1.75rem" />)
@@ -19,9 +20,9 @@ const Card = (props) => {
         </button>
       </div>
 
-      <div>
-        <p>{course.title}</p>
-        <p>{course.description}</p>
+      <div className='p-4'>
+        <p  className="text-lg font-semibold leading-6 text-white">{course.title}</p>
+        <p className='mt-2 text-white'>{course.description}</p>
       </div>
 
     </div>
