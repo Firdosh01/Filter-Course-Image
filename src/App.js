@@ -32,12 +32,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-bgDark2">
+    <div className="flex flex-col min-h-screen bg-bgDark2 bg-slate-600">
 
       <div>
         <Navbar></Navbar>
       </div>
 
+      <div className="bg-slate-600">
       <div>
         <Filter filterData={filterData}></Filter>
       </div>
@@ -48,7 +49,7 @@ const App = () => {
           loading ? (<Spinner/>) : (<Cards courses= {courses}/>)
         }
       </div>
-
+    </div>
     </div>
   )
 }

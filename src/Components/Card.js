@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const Card = (props) => {
   let course = props.course;
   return (
-    <div  className='w-[300px] bg-bgDark bg-opacity-80 rounded-md overflow-hidden'>
+    <div  className='w-[300px] bg-bgDark bg-slate-900 bg-opacity-80 rounded-md overflow-hidden'>
 
       <div className='relative'>
         <img src={course.image.url} />
