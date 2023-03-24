@@ -1,12 +1,16 @@
 import React from 'react'
 import Card from './Card';
+import { useState } from 'react';
 
 const Cards = (props) => {
 
   let courses = props.courses;
-  console.log("Printing data");
+  let category = props.category;
+  const [likedCourses, setLikedCourses] = useState([]);
 
   function getCourses() {
+    if(category === "All") {
+      
     let allCourses = [];
     Object.values(courses).forEach(array => {
       array.forEach(coursData => {
@@ -16,6 +20,12 @@ const Cards = (props) => {
     });
     return allCourses;
   }
+  else {
+    //main sirf specific categiry ka data array krunga  
+    return courses[category];      
+}
+
+}
   
   return (
     <div className="flex flex-wrap justify-center gap-4 mb-4">
